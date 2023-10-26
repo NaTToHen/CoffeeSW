@@ -1,18 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Cafe from './Cafe.js'
-import { Carousel } from '@trendyol-js/react-carousel';
+import { motion } from 'framer-motion'
 
-function SlideCatalogo() {
-  return(
-	<Carousel>
-		<Cafe />
-		<Cafe />
-		<Cafe />
-		<Cafe />
-	</Carousel>
-  )
+function slideCatalogo() {
+
 }
 
-export default SlideCatalogo
-
+export default slideCatalogo

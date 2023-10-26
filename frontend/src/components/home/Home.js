@@ -1,39 +1,45 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+
 import Header from '../Header.js'
-import SlideCatalogo from './SlideCatalogo.js'
+import SectionSobre from './SectionSobre.js'
 
-import fotoSobre from '../../img/fotoSobre.svg'
-
-import facebook from '../../img/facebook.svg'
-import twitter from '../../img/twitter.svg'
-import linkedin from '../../img/linkedin.svg'
-import instagram from '../../img/instagram.svg'
+import CardCafe from './CardCafe.js'
 
 function Home() {
+
+   const [data, setData] = useState([]);
+   const [error, setError] = useState(null);
+
+   useEffect(() => {
+      axios.get('http://localhost:8000/api/db/catalogo')
+         .then(response => {
+            // Faça algo com os dados da resposta, por exemplo, definir o estado do componente
+            setData(response.data)
+         })
+         .catch(error => {
+            // Lida com erros, por exemplo, definindo um estado de erro
+            setError(error)
+         })
+   }, [])
+
    return (
       <div className="Home">
          <Header />
          <div className='fundoHome'></div>
 
-         <section className='sobre'>
-            <img src={fotoSobre} className='fotoSobre'/>
-            <div className='textosSobre'>
-               <h1 className='tituloSobre'>Quem somos</h1>
-               <p className='textoSobre'>
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-               </p>
-               <div className='redesSociais'>
-                  <img src={facebook} className='fotoRede'></img>
-                  <img src={instagram} className='fotoRede'></img>
-                  <img src={linkedin} className='fotoRede'></img>
-                  <img src={twitter} className='fotoRede'></img>
-               </div>
-            </div>
-         </section>
+         <SectionSobre />
 
          <section className='slideCatalogo'>
-            <SlideCatalogo />
+            {data.map(data => {
+            return <CardCafe
+               key={data.id}
+               nome={data.nome}
+               desc={data.descricao}
+               fotoURL={data.fotoURL}
+               id={data.id} />
+            })}
          </section>
-
       </div>
    )
 }

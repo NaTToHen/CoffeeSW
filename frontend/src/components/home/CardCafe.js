@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import arrow from '../../img/arrow.svg'
 
 function CardCafe(props) {
@@ -7,7 +8,9 @@ function CardCafe(props) {
          <div className="infoCard">
             <h1 className="nomeCafe">{props.nome}</h1>
             <h2 className="descCafe">{props.desc}</h2>
-            <a href="#" className="btnSaibaMais">Saiba Mais <img src={arrow}></img></a>
+            <Link to={`/catalogo/cafe/${props.id}`} style={{ textDecoration: 'none' }}>
+               <a className="btnSaibaMais">Saiba Mais<img src={arrow}></img></a>
+            </Link>
          </div>
       </div>
    )

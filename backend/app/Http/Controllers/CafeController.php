@@ -12,4 +12,10 @@ class CafeController extends Controller
 
         return response()->json($cafes, 200, [], JSON_UNESCAPED_UNICODE);
     }
+
+    public function unico($id) {
+        $cafe = Cafe::find($id);
+
+        return response()->json($cafe, 200, [], JSON_UNESCAPED_UNICODE);
+    }
 }

@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+
 import logo from '../img/logoHeader.svg'
 import '../components/home/css/Home.css'
 
-function Header() {
+function Header(props) {
+   
    return (
-      <header className="HeaderHome">
+      <header className={`HeaderHome ${props.pagina}`}>
          <Link to="/"><img src={logo} /></Link>
          <nav className="navHeader">
             <ul className="navLinks">

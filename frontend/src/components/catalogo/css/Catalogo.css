@@ -1,0 +1,59 @@
+.HeaderCatalogo {
+   background: #C77700;
+}
+
+.containerCatalogo {
+   margin: auto;
+   margin-top: 250px;
+   margin-bottom: 250px;
+   width: 90%;
+}
+
+.cardsCatalogo {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
+   grid-gap: 60px;
+}
+
+.cardCafeCatalogo {
+   position: relative;
+   max-width: 266px;
+}
+
+.infoCardCatalogo {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   justify-content: space-between;
+   max-height: 40%;
+   min-width: 100%;
+   backdrop-filter: blur(5px);
+   background: rgba(0, 0, 0, 0.46);
+   bottom: 0;
+}
+
+.nomeCafeCatalogo {
+   color: #A46200;
+   font-weight: 500;
+   margin-left: 5%;
+}
+
+.valorCafeCatalogo {
+   color: white;
+   font-weight: 500;
+   margin-left: 5%;
+}
+
+.btnSaibaMaisCatalogo {
+   width: 100%;
+   background-color: #A46200;
+   text-decoration: none;
+   display: flex;
+   padding: 6px;
+   gap: 8px;
+   align-items: center;
+   justify-content: center;
+   font-size: 25px;
+   color: white;
+}

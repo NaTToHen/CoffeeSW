@@ -17,3 +17,27 @@ VALUES ('Café Moccatino', 'Café com leite quente e baunilha extra forte',
 INSERT INTO cafes (nome, descricao, valor, peso, fotoURL) 
 VALUES ('Café Espresso com Leite', 'Uma mistura de café premium com leite',
  2.59, 275.00, 'https://i.imgur.com/MXDph2S.png');
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+INSERT INTO cafes (nome, descricao, valor, peso, fotoURL) 
+VALUES ('Café Mocha', 'Uma deliciosa combinação de café, leite, chocolate e chantilly.', 
+ 4.99, 350.00, 'https://i.imgur.com/Hq2LYyF.png');
+
+INSERT INTO cafes (nome, descricao, valor, peso, fotoURL) 
+VALUES ('Café Americano', 'Um café mais suave e diluído com água quente.', 
+ 2.29, 400.00, 'https://i.imgur.com/aJObObA.png');
+
+INSERT INTO cafes (nome, descricao, valor, peso, fotoURL) 
+VALUES ('Café Macchiato', 'Café expresso com uma pequena quantidade de leite vaporizado.', 
+ 3.49, 200.00, 'https://i.imgur.com/v6dZoSL.png');
+
+INSERT INTO cafes (nome, descricao, valor, peso, fotoURL) 
+VALUES ('Café Frappuccino', 'Uma bebida gelada à base de café com chantilly e calda de caramelo.', 
+ 4.79, 450.00, 'https://i.imgur.com/HpWsKcH.png');

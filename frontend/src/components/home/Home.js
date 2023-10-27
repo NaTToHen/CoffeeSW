@@ -17,8 +17,6 @@ function Home() {
    const [data, setData] = useState([]);
    const [error, setError] = useState(null);
 
-   const infoCard = document.querySelector('.infoCard')
-
    useEffect(() => {
       axios.get('http://localhost:8000/api/db/catalogo')
          .then(response => {

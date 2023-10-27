@@ -17,7 +17,12 @@
 
 .cardCafeCatalogo {
    position: relative;
+   transition: 0.3s;
    max-width: 266px;
+}
+
+.cardCafeCatalogo:hover {
+   transform: scale(1.02);
 }
 
 .infoCardCatalogo {
@@ -56,4 +61,67 @@
    justify-content: center;
    font-size: 25px;
    color: white;
+}
+
+
+/*----------- Perfil do Cafe -----------*/
+
+
+.infosCafe {
+   display: flex;
+   width: 90%;
+   margin: auto;
+   margin-top: 250px;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+
+.infosCafe img {
+   width: 400px;
+}
+
+.infosCafe .textosCafe {
+   display: flex;
+   flex-direction: column;
+   height: 575px;
+   max-width: 650px;
+}
+
+.textosCafe h1 {
+   color: #A46200;
+   font-size: 60px;
+}
+
+.textosCafe p {
+   color: #9F9F9F;
+   font-size: 30px;
+}
+
+.textosCafe h3 {
+   color: #9F9F9F;
+   font-weight: 400;
+   font-size: 40px;
+   margin-bottom: 50px;
+}
+
+.textosCafe h2 {
+   color: #A46200;
+   font-size: 60px;
+}
+
+.textosCafe button {
+   text-align: center;
+   cursor: pointer;
+   font-weight: 500;
+   margin-top: 12px;
+   padding: 10px 20px;
+   border: none;
+   font-size: 40px;
+   color: #ffffff;
+   background-color: #C77700;
+}
+
+.textosCafe button:hover {
+   background-color: #A46200;
 }

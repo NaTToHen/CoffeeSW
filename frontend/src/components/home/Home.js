@@ -28,12 +28,10 @@ function Home() {
    }, [])
 
    useEffect(() => {
-
       window.addEventListener('scroll', function () {
          const header = document.querySelector('.HeaderHome');
          header.classList.toggle('fundoHeaderHome', window.scrollY > 600);
       });
-
    }, []);
 
    return (
@@ -59,7 +57,6 @@ function Home() {
          <Assinatura />
 
          <Footer />
-
       </div>
    )
 }
